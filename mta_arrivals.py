@@ -206,6 +206,10 @@ class MTAArrivals:
                 trip = entity.trip_update  # Get the trip information
                 route_id = trip.trip.route_id  # Get which line this train is on (A, C, etc.)
                 
+                # Only track A and C lines - skip E trains and anything else
+                if route_id not in ('A', 'C'):
+                    continue
+                
                 # Each trip has multiple stops - loop through them to find our station
                 for stop_update in trip.stop_time_update:
                     # Check if this stop is the station we're looking for
