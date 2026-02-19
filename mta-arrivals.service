@@ -1,0 +1,16 @@
+[Unit]
+Description=MTA Arrivals Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/mta-arrivals
+ExecStart=/home/pi/mta-arrivals/.venv/bin/python /home/pi/mta-arrivals/mta_arrivals.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

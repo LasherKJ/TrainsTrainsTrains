@@ -1,0 +1,9 @@
+requests>=2.27.0
+gtfs-realtime-bindings>=1.0.0
+protobuf>=4.0.0
+spidev>=3.5.0
+Pillow>=8.0.0
+RPi.GPIO>=0.7.0
+gpiozero>=1.6.0
+numpy>=1.21.0
+lgpio>=0.2.0
